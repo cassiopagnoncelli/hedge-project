@@ -1,0 +1,3 @@
+- Adicionado filtro do timeframe diretor: o mesmo sinal, dado em
+  timeframe maior, determina a tendência e um sinal, dado no
+  timeframe corrente, dispara o trigger de entrada.

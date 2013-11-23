@@ -1,0 +1,3 @@
+- Filtrar trades ruins em início de tendência que são abertos quando
+  a cotação está muito afastada do cruzamento das MMs, geralmente isso
+  denota uma abertura de posição muito atrasada.

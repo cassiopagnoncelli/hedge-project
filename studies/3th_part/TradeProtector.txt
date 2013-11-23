@@ -1,0 +1,28 @@
+The idea of this EA came to me after the following situation: I have opened a position, but suddenly had to leave. I have set reasonable SL, but what happened:
+
+During my absence, my position reached 40 pips profit, then market reversed and instead of any gain, the initial SL has been hit - causing small - but unnecessary lose.
+
+I don't like trailing stops, because when the trend is nice, let's say we have after few hours 120 pips profit. My trailing stop set to 35 pips, which was reasonable at the beginning, now can kill this nice winning trade if there would be 38% retracement.
+
+That's why I prefer proportional trailing stop, given by the formula:
+
+ProportionalSL = | CurrentPrice - OrderOpenPrice | x Ratio - Spread
+
+Let's say I will set the Ratio to 55%. In the example above I would get about 15 pips profit, which is better than nothing, but if the trend would continue, 40% retracement (0.38 Fib) - no matter what would be reversal point - would not stop my trade.
+
+There is also a part which I am not certain of, but by default it is switched off. I call it Escape - when your trade reached an impressive lose, you usually would be happy to close it with even very small profit or even some - less impressive lose. So you can set a 'disturbing' level of lose after which you would like to activate this function, then profit or lose you would be happy to close that trade with. In most cases - if the stop loses are properly set, this will not be necessary, but I decide to leave it in the code, just in case...
+
+
+So here we go:
+
+Put this EA on M1 or M5 chart.
+
+Set :
+
+logging=1 - if you want logs in Experts\Files directory
+nTrailingStop [pips] - initial trailing stop. It will be used until your trade will reach profit = nPropSLThreshold
+nPropSLThreshold [pips] - after reaching this profit proportional trailing stop will be used
+dPropSLRatio [decimal] - multiplying factor ( PropSL = Profit * dPropSLRatio - Spred )
+nUseEscape [ 1 or 0 ] - escape misplaced trades as soon as they reach some minimal profit
+nEscapeLevel [pips] - lose size after which we want our trade to terminate as soon as it will reach next high
+nEscapeTP [pips] - take profit level in pips (you can set to negative value - then it will be a lose that you would be happy to get, in the case your trade reached some impressive negative pips value)

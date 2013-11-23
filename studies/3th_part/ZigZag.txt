@@ -1,0 +1,5 @@
+A regular release of an EA based on the ZigAndZag indicator. It still needs the indicator, you can find it in the Code Base, on the Forum and also here. The discussion is there, as well.
+
+The function of multiple orders is added; the forcible closing is removed, i.e., it works by the reverse system, there is some resemblance of martingale, it takes opening signals from a larger TF.
+
+Here is the balance obtained during its running from the beginning of the year with the standard parameters on GBPUSD, TF=5 MIN. 

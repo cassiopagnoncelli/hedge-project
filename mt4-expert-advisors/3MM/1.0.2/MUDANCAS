@@ -1,0 +1,5 @@
+- O timeframe diretor trabalha agora com 2 MMs (idêntica à estratégia 2MM)
+  ao invés das 3 MMs da versão 1.0.1.
+- Um módulo para notificar (sem tratar) erros oriundos de OrderSend() foi
+  colocado.
+- A evolução da carteira pode ser exportada para um arquivo.
